@@ -4,10 +4,14 @@
 
 <PageTitle>Home</PageTitle>
 
-<h3>Gráficos Dinâmicos</h3>
-
+<h3>Line</h3>
 <blazor_chart_webassembly.Components.ChartComponent ChartType="line" Labels="@labels1" DataPoints="@data1" BackgroundColors="@colors1" />
-<blazor_chart_webassembly.Components.ChartComponent ChartType="scatter" Labels="@labels3" DataPoints="@data3" BackgroundColors="@colors3" />
+
+<h3>Bar</h3>
+<blazor_chart_webassembly.Components.ChartComponent ChartType="bar" Labels="@labels3" DataPoints="@data3" BackgroundColors="@colors3" />
+
+<h3>Radar</h3>
+<blazor_chart_webassembly.Components.ChartComponent ChartType="radar" Labels="@labels3" DataPoints="@data3" BackgroundColors="@colors3" />
 
 @code {
     public List<string> labels1 = new() { "Jan", "Fev", "Mar" };
@@ -16,5 +20,5 @@
     
     public List<string> labels3 = new() { "Red", "Blue", "Yellow" };
     public List<int> data3 = new() { 300, 50, 100 };
-    public List<string> colors3 = new() { "rgb(255, 99, 132)", "rgb(54, 162, 235)", "rgb(255, 205, 86)" };
+    public List<string> colors3 = new() { "rgb(255, 89, 1)", "rgb(54, 162, 235)", "rgb(255, 205, 86)" };
 }
