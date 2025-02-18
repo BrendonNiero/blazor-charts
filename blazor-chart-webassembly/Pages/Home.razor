@@ -4,14 +4,7 @@
 
 <PageTitle>Home</PageTitle>
 
-<h3>Line</h3>
 <blazor_chart_webassembly.Components.ChartComponent ChartType="line" Labels="@labels1" DataPoints="@data1" BackgroundColors="@colors1" />
-
-<h3>Bar</h3>
-<blazor_chart_webassembly.Components.ChartComponent ChartType="bar" Labels="@labels3" DataPoints="@data3" BackgroundColors="@colors3" />
-
-<h3>Radar</h3>
-<blazor_chart_webassembly.Components.ChartComponent ChartType="bubble" Labels="@labels3" DataPoints="@data3" BackgroundColors="@colors3" />
 
 @code {
     public List<string> labels1 = new() { "Jan", "Fev", "Mar" };
