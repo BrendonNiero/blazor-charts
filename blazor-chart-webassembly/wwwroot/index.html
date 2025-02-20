@@ -9,19 +9,18 @@
     <link rel="stylesheet" href="css/app.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="blazor-chart-webassembly.styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div id="app">
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
+        <section class="loading">
+            <i class="fa-solid fa-spinner loading-ico"></i>
+        </section>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        window.CreateChart = async (chartId, chartType, labels, data, colors) => {
+        window.CreateChartLine = async (chartId, chartType, labels, data, colors) => {
             const ctx = document.getElementById(chartId);
             new Chart(ctx, {
                 type: chartType,
@@ -34,6 +33,34 @@
                         borderColor: colors,
                         borderWidth: 1
                     }]
+                }
+            });
+        }
+        window.CreateDoubleBarChart = async (chartId, labels) => {
+            const ctx = document.getElementById(chartId);
+            new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Fully Rounded',
+                            data: [-100, - 55,- 100, -80, -75, - 55, -100],
+                            borderColor: "#5C6BFF",
+                            backgroundColor: "#8C98FF",
+                            borderWidth: 2,
+                            borderRadius: 20,
+                            borderSkipped: false,
+                        },
+                        {
+                            label: 'Small Radius',
+                            data: [80, 53, 54, 90, 53, 54, 90],
+                            borderColor:"#18CA58",
+                            backgroundColor: "#8AFF96",
+                            borderWidth: 2,
+                            borderRadius: 5,
+                            borderSkipped: false,
+                        }]
                 }
             });
         }
