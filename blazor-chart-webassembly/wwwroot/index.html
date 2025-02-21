@@ -45,7 +45,7 @@
                     datasets: [
                         {
                             label: 'Fully Rounded',
-                            data: [-100, - 55,- 100, -80, -75, - 55, -100],
+                            data: [-100, - 55,- 100, -80, -75, - 55, -100, -88],
                             borderColor: "#5C6BFF",
                             backgroundColor: "#8C98FF",
                             borderWidth: 2,
@@ -54,13 +54,29 @@
                         },
                         {
                             label: 'Small Radius',
-                            data: [80, 53, 54, 90, 53, 54, 90],
+                            data: [80, 53, 54, 90, 53, 54, 90, 60],
                             borderColor:"#18CA58",
                             backgroundColor: "#8AFF96",
                             borderWidth: 2,
                             borderRadius: 5,
                             borderSkipped: false,
                         }]
+                }
+            });
+        }
+        window.CreateCharDoughnut = async (chartId, labels, data, colors) => {
+            const ctx = document.getElementById(chartId);
+            new Chart(ctx, {
+                type: "doughnut",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Dataset',
+                        data: data,
+                        backgroundColor: colors,
+                        borderColor: colors,
+                        borderWidth: 1
+                    }]
                 }
             });
         }
