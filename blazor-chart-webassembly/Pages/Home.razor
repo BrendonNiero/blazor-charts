@@ -7,7 +7,11 @@
 <section class="chart-list">
     <blazor_chart_webassembly.Components.ChartLine ChartType="line" Labels="@labels1" DataPoints="@data1" BackgroundColors="@colors1" />
     <blazor_chart_webassembly.Components.BarChart.DoubleBarChart Labels="@labels2"/>
-    <blazor_chart_webassembly.Components.RoundedChart.ChartDoughnut Labels="@labels1" DataPoints="@data1" BackgroundColors="@colors1" />
+    <div class="list-roundeds">
+        <blazor_chart_webassembly.Components.RoundedChart.ChartDoughnut Labels="@labelsDoughnut" DataPoints="@dataDoughnut" BackgroundColors="@colorsDoughnut" />
+        <blazor_chart_webassembly.Components.RoundedChart.ChartDoughnut Labels="@labelsDoughnut" DataPoints="@dataDoughnut" BackgroundColors="@colorsDoughnut" />
+        <blazor_chart_webassembly.Components.RoundedChart.ChartDoughnut Labels="@labelsDoughnut" DataPoints="@dataDoughnut" BackgroundColors="@colorsDoughnut" />
+    </div>
 </section>
 
 @code {
@@ -15,4 +19,8 @@
     public List<string> labels1 = new() { "Jan", "Fev", "Mar", "", "", "", "", "", "", "", "" };
     public List<int> data1 = new() { 10, 50, 30, 55, 66, 11, 42, 80, 90, 11, 50 };
     public List<string> colors1 = new() { "#3fc598" };
+
+    public List<string> labelsDoughnut = new() { "Jan", "Fev", "Mar"};
+    public List<int> dataDoughnut = new() { 10, 80, 29 };
+    public List<string> colorsDoughnut = new() { "#8c98ff", "#2cc295", "#03624c" };
 }

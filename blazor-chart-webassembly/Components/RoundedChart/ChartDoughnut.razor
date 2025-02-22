@@ -1,12 +1,11 @@
 @inject IJSRuntime JS;
 
-<div class="container">
-    <canvas id="@ChartId" width="500" height="100"></canvas>
+<div class="container-rounded">
+    <canvas id="@ChartId" width="300" height="500"></canvas>
 </div>
 
 @code {
     [Parameter] public string ChartId { get; set; } = $"chart-{Guid.NewGuid()}";
-    [Parameter] public string ChartType { get; set; } = "line";
     [Parameter] public List<string> Labels { get; set; } = new();
     [Parameter] public List<int> DataPoints { get; set; } = new();
     [Parameter] public List<string> BackgroundColors { get; set; } = new();
@@ -15,7 +14,7 @@
     {
         if (firstRender)
         {
-            await JS.InvokeVoidAsync("CreateCharDoughnut", ChartId, ChartType, Labels, DataPoints, BackgroundColors);
+            await JS.InvokeVoidAsync("CreateCharDoughnut", ChartId, Labels, DataPoints, BackgroundColors);
         }
     }
 }

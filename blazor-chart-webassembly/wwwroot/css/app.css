@@ -52,6 +52,20 @@ body {
     border-radius: 2rem;
 }
 
+.container-rounded {
+    border: 1px solid #38373c;
+    padding: 3rem;
+    border-radius: 2rem;
+    height: 500px;
+    width: 100%;
+}
+
+.list-roundeds {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
 .nav {
     display: flex;
     align-items: center;
