@@ -22,7 +22,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #38ae87;
+    color: #13f287;
 }
 
 .loading-ico {
@@ -53,23 +53,14 @@ body {
 }
 
 .container-rounded {
+    border: 1px solid #38373c;
     padding: 3rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
     height: 500px;
     width: 100%;
-    background-color: #fff;
-}
-
-.glass-container {
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.22);
-    border-radius: 2rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 1rem;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .list-roundeds {
@@ -103,7 +94,7 @@ body {
 }
 
 .logo {
-    background-color: #3fc598;
+    background-color: #13f287;
     color: #fff;
     width: 50px;
     height: 50px;
@@ -115,11 +106,13 @@ body {
 
 .title-logo {
     color: #fff;
+    font-weight: 100;
 }
 
 .btn {
-    background-color: #3fc598;
-    border: none;
+    background: rgb(36,35,40);
+    background: linear-gradient(180deg, rgba(36,35,40,1) 2%, rgba(17,16,21,1) 100%);    
+    border: 1px solid #38373c;
     outline: none;
     padding: 15px 20px 15px 20px;
     color: #fff;
@@ -130,8 +123,17 @@ body {
     font-size: 15px;
 }
 
-.btn:hover {
-    background-color: #38ae87;
+.btn-green {
+    background-color: #13f287;  
+    outline: none;
+    border: none;
+    padding: 15px 20px 15px 20px;
+    color: #111015;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s all ease;
+    font-size: 15px;
 }
 
 a {
@@ -140,5 +142,38 @@ a {
 }
 
 a:hover {
-    color: #3fc598;
+    color: #13f287;
 } 
+
+.gradient-text {
+    background: linear-gradient(to bottom, #27e08b, #118c76);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/*================================= HEADER =================================*/
+.title-header {
+    font-size: 4rem;
+    color: #f3f3f7;
+    text-align: center;
+    width: 1200px;
+}
+
+.header-home {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* ================================== UTILS =======================================*/
+
+.flex-i-center {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

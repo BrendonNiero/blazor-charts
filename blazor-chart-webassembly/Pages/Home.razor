@@ -4,19 +4,21 @@
 
 <PageTitle>Home</PageTitle>
 
+<section class="header-home">
+    <h1 class="title-header">Integre facilmente componentes gráficos em suas <span class="gradient-text">aplicações Blazor.</span></h1>
+    <p>Dê vida à sua aplicação Blazor com gráficos dinâmicos e intuitivos.</p>
+    <div class="flex-i-center">
+        <button class="btn-green flex-i-center">Começar</button>
+        <button class="btn">Modelos</button>
+    </div>
+</section>
 <section class="chart-list">
     <blazor_chart_webassembly.Components.ChartLine ChartType="line" Labels="@labels1" DataPoints="@data1" BackgroundColors="@colors1" />
     <blazor_chart_webassembly.Components.BarChart.DoubleBarChart Labels="@labels2"/>
     <div class="list-roundeds">
-        <div class="glass-container">
             <blazor_chart_webassembly.Components.RoundedChart.ChartDoughnut Labels="@labelsDoughnut" DataPoints="@dataDoughnut" BackgroundColors="@colorsDoughnut" />
-        </div>
-        <div class="glass-container">
             <blazor_chart_webassembly.Components.RoundedChart.ChartPie Labels="@labelsDoughnut" DataPoints="@dataDoughnut" BackgroundColors="@colorsDoughnut" />
-        </div>
-        <div class="glass-container">
             <blazor_chart_webassembly.Components.RoundedChart.ChartPolarArea Labels="@labelsDoughnut" DataPoints="@dataDoughnut" BackgroundColors="@colorsDoughnut" />
-        </div>
     </div>
 </section>
 
@@ -27,6 +29,6 @@
     public List<string> colors1 = new() { "#3fc598" };
 
     public List<string> labelsDoughnut = new() { "Jan", "Fev", "Mar"};
-    public List<int> dataDoughnut = new() { 10, 80, 29 };
+    public List<int> dataDoughnut = new() { 60, 80, 39 };
     public List<string> colorsDoughnut = new() { "#8c98ff", "#2cc295", "#03624c" };
 }
