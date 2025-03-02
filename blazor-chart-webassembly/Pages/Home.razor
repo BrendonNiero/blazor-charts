@@ -12,15 +12,6 @@
         <button class="btn">Modelos</button>
     </div>
 </section>
-<section class="chart-list">
-    <blazor_chart_webassembly.Components.ChartLine ChartType="line" Labels="@labels1" DataPoints="@data1" BackgroundColors="@colors1" />
-    <blazor_chart_webassembly.Components.BarChart.DoubleBarChart Labels="@labels2"/>
-    <div class="list-roundeds">
-            <blazor_chart_webassembly.Components.RoundedChart.ChartDoughnut Labels="@labelsDoughnut" DataPoints="@dataDoughnut" BackgroundColors="@colorsDoughnut" />
-            <blazor_chart_webassembly.Components.RoundedChart.ChartPie Labels="@labelsDoughnut" DataPoints="@dataDoughnut" BackgroundColors="@colorsDoughnut" />
-            <blazor_chart_webassembly.Components.RoundedChart.ChartPolarArea Labels="@labelsDoughnut" DataPoints="@dataDoughnut" BackgroundColors="@colorsDoughnut" />
-    </div>
-</section>
 
 <section class="types-charts-section">
     <h1 class="title-header-types">Visualize seus dados com o <span class="gradient-text">gráfico ideal</span></h1>
@@ -51,6 +42,16 @@
             <h3 class="title-type-card">Gráfico Radar</h3>
             <p>Compare múltiplas variáveis em um formato radial envolvente.</p>
         </div>
+    </div>
+</section>
+
+<section class="chart-list p-page">
+    <blazor_chart_webassembly.Components.ChartLine ChartType="line" Labels="@labels1" DataPoints="@data1" BackgroundColors="@colors1" />
+    <blazor_chart_webassembly.Components.BarChart.DoubleBarChart Labels="@labels2"/>
+    <div class="list-roundeds">
+            <blazor_chart_webassembly.Components.RoundedChart.ChartDoughnut Labels="@labelsDoughnut" DataPoints="@dataDoughnut" BackgroundColors="@colorsDoughnut" />
+            <blazor_chart_webassembly.Components.RoundedChart.ChartPie Labels="@labelsDoughnut" DataPoints="@dataDoughnut" BackgroundColors="@colorsDoughnut" />
+            <blazor_chart_webassembly.Components.RoundedChart.ChartPolarArea Labels="@labelsDoughnut" DataPoints="@dataDoughnut" BackgroundColors="@colorsDoughnut" />
     </div>
 </section>
 
