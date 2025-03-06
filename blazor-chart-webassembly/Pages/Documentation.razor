@@ -2,9 +2,18 @@
 
 <PageTitle>Documentação</PageTitle>
 
-<section>
-    @*<SideBar /> // Criar sidebar*@
-    <section>
-        <h1>Documentação</h1>
+<section class="doc-section">
+    <blazor_chart_webassembly.Layout.SideMenu />
+    <section class="doc-area">
+        <h1 class="title-header-doc">Documentação</h1>
+        <h2 class="title-doc">Instalação</h2>
+        <div class="line"></div>
+        <p class="mb-1">Alternatively, you can run them locally. To do so, clone the Chart.js repository from GitHub, 
+            run pnpm ci to install all packages, then run pnpm run docs:dev to build the documentation. 
+            As soon as the build is done, you can go to localhost:8080/samples to see the samples.</p>
+        <p>These samples are made for demonstration purposes only. They won't work out of the box if you 
+            copy paste them into your own website. This is because of how the docs are getting built. Some 
+            boilerplate code gets hidden. For a sample that can be copied and pasted and used directly you 
+            can check the usage page.</p>
     </section>
 </section>
