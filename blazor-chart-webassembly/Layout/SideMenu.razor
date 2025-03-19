@@ -1,14 +1,34 @@
+@using MudBlazor;
+@inject NavigationManager Navigation
+
 <aside class="sidebar">
-    <NavLink href="/getstarted">
-        <i class="fa-solid fa-download"></i>
-        Instalação
-    </NavLink>
-    <NavLink href="/getstarted">
-        <i class="fa-solid fa-chart-simple"></i>
-        Gráficos
-    </NavLink>
-    <NavLink href="/getstarted">Legenda</NavLink>
-    <NavLink href="/getstarted">Título</NavLink>
-    <NavLink href="/getstarted">Utils</NavLink>
-    <NavLink href="/getstarted">Dúvidas Frequentes</NavLink>
+    <MudPaper Width="250px" Class="d-inline-flex py-3" Elevation="0">
+        <MudNavMenu Class="mud-width-full">
+            <MudNavLink Href="/doc" Icon="@Icons.Material.Filled.ArrowDownward" Class="@(IsActive("/doc") ? "active" : "")">
+            Instalação
+        </MudNavLink>
+
+        <MudNavGroup Icon="@Icons.Material.Filled.BarChart" Title="Gráficos" Class="custom-nav">  
+            <MudNavLink Href="/linha" Class="@(IsActive("/linha") ? "active" : "")">Linha</MudNavLink>
+            <MudNavLink Href="/barra" Class="@(IsActive("/barra") ? "active" : "")">Barra</MudNavLink>
+            <MudNavLink Href="/doughnut" Class="@(IsActive("/doughnut") ? "active" : "")">Doughnut</MudNavLink>
+            <MudNavLink Href="/pizza" Class="@(IsActive("/pizza") ? "active" : "")">Pizza</MudNavLink>
+        </MudNavGroup>
+
+        <MudNavLink Href="/legenda" Icon="@Icons.Material.Filled.ShortText" Class="@(IsActive("/legenda") ? "active" : "")">
+            Legenda
+        </MudNavLink>
+
+        <MudNavLink Href="/duvidas" Icon="@Icons.Material.Filled.FormatQuote" Class="@(IsActive("/duvidas") ? "active" : "")">
+            Dúvidas Frequentes
+        </MudNavLink>
+        </MudNavMenu>
+    </MudPaper>
 </aside>
+
+@code {
+    private bool IsActive(string href)
+    {
+        return Navigation.Uri.EndsWith(href, StringComparison.OrdinalIgnoreCase);
+    }
+}

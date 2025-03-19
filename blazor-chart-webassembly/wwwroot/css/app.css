@@ -7,12 +7,12 @@
 }
 
 body {
-    background-color: #111015;
-    color: #6a6a6e;
+    background-color: #111015 !important;
+    color: #6a6a6e !important;
     height: 100%;
     min-height: 100vh;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif !important;
 }
 
 h1 {
@@ -23,6 +23,11 @@ h1 {
 h1:focus {
     outline: none;
     border: none;
+}
+
+.custom-nav {
+    fill: #6a6a6e;
+    color: #6a6a6e !important;
 }
 
 .line {
@@ -103,8 +108,8 @@ h1:focus {
 
 .sidebar {
     border-right: 1px solid #38373c;
-    padding: 2rem;
-    width: 600px;
+    padding: 1rem;
+    width: 500px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -272,6 +277,11 @@ a:hover {
     align-items: center;
 }
 /* ================================== UTILS =======================================*/
+
+.active {
+    color: #13f287;
+    fill: #13f287;
+}
 
 .flex-i-center {
     display: flex;
