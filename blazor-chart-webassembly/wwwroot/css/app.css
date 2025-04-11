@@ -154,17 +154,12 @@ h1:focus {
 }
 
 .logo {
-    background-color: #13f287;
-    color: #fff;
     width: 50px;
     height: 50px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .title-logo {
+    font-size: 35px;
     color: #fff;
     font-weight: 100;
 }
@@ -181,6 +176,28 @@ h1:focus {
     font-weight: 400;
     transition: 0.3s all ease;
     font-size: 15px;
+}
+
+.clipboard-area {
+    background: rgb(36,35,40);
+    background: linear-gradient(180deg, rgba(36,35,40,1) 2%, rgba(17,16,21,1) 100%);    
+    border: 1px solid #38373c;
+    outline: none;
+    padding: 15px 20px 15px 20px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn-clip {
+    font-size: 30px;
+}
+
+.btn-clip-check {
+    color: #13f287;
 }
 
 .btn-green {

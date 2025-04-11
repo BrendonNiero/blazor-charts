@@ -1,0 +1,26 @@
+@using MudBlazor;
+@inject IJSRuntime JS
+
+<div class="clipboard-area">
+    <span>@textToCopy</span>
+        <button class="btn-clip" onclick="@(() => CopyToClipboard(textToCopy))">
+            @if(!clipped){
+                <i class="fa-solid fa-clone"></i>
+            } else {
+                <i class="fa-solid fa-check btn-clip-check"></i>
+            }
+        </button>
+</div>
+
+@code {
+    private string textToCopy = "dotnet add package BlazorChartsClassLibray --version 1.0.15";
+    public bool clipped { get; set; } = false;
+
+    private async Task CopyToClipboard(string text)
+    {
+        clipped = true;
+        await JS.InvokeVoidAsync("navigator.clipboard.writeText", text);
+        await Task.Delay(4000);
+        clipped = false;
+    }
+}

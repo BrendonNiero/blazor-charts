@@ -1,18 +1,16 @@
 ﻿@page "/"
-@inject IJSRuntime JS
-@using Components;
-@using MudBlazor;
+@using blazor_chart_webassembly.Components;
 
 <PageTitle>Home</PageTitle>
 
 <NavMenu />
 <section class="header-home">
     <h1 class="title-header">Integre facilmente componentes gráficos em suas <span class="gradient-text">aplicações Blazor.</span></h1>
-    <p>Dê vida à sua aplicação Blazor com gráficos dinâmicos e intuitivos.</p>
     <div class="flex-i-center">
         <NavLink href="/doc" class="btn-green flex-i-center">Começar</NavLink>
         <button class="btn">Modelos</button>
     </div>
+    <blazor_chart_webassembly.Components.Clipboard.ChartInstalation />
 </section>
 
 <section class="types-charts-section">
@@ -46,24 +44,3 @@
         </div>
     </div>
 </section>
-
-<section class="chart-list p-page">
-    <blazor_chart_webassembly.Components.ChartLine ChartType="line" Labels="@labels1" DataPoints="@data1" BackgroundColors="@colors1" />
-    <blazor_chart_webassembly.Components.BarChart.DoubleBarChart Labels="@labels2"/>
-    <div class="list-roundeds">
-            <blazor_chart_webassembly.Components.RoundedChart.ChartDoughnut Labels="@labelsDoughnut" DataPoints="@dataDoughnut" BackgroundColors="@colorsDoughnut" />
-            <blazor_chart_webassembly.Components.RoundedChart.ChartPie Labels="@labelsDoughnut" DataPoints="@dataDoughnut" BackgroundColors="@colorsDoughnut" />
-            <blazor_chart_webassembly.Components.RoundedChart.ChartPolarArea Labels="@labelsDoughnut" DataPoints="@dataDoughnut" BackgroundColors="@colorsDoughnut" />
-    </div>
-</section>
-
-@code {
-    public List<string> labels2 = new() { "Jan", "Fev", "Mar", "Abr", "", "", "", ""};
-    public List<string> labels1 = new() { "Jan", "Fev", "Mar", "", "", "", "", "", "", "", "" };
-    public List<int> data1 = new() { 10, 50, 30, 55, 66, 11, 42, 80, 90, 11, 50 };
-    public List<string> colors1 = new() { "#3fc598" };
-
-    public List<string> labelsDoughnut = new() { "Jan", "Fev", "Mar"};
-    public List<int> dataDoughnut = new() { 60, 80, 39 };
-    public List<string> colorsDoughnut = new() { "#8c98ff", "#2cc295", "#03624c" };
-}
