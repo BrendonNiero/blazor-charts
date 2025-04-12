@@ -1,5 +1,16 @@
 ﻿@page "/"
+
+
+
+
 @using blazor_chart_webassembly.Components;
+
+
+
+@using BlazorChartsClassLibray.Components;
+
+
+
 
 <PageTitle>Blazor Charts</PageTitle>
 
@@ -13,34 +24,36 @@
     <blazor_chart_webassembly.Components.Clipboard.ChartInstalation />
 </section>
 
-<section class="types-charts-section">
-    <h1 class="title-header-types">Visualize seus dados com o <span class="gradient-text">gráfico ideal</span></h1>
-    <div class="chart-type-list">
-        <div class="card-type">
-            <h3 class="title-type-card">Gráfico de Linhas</h3>
-            <p>Perfeito para visualizar mudanças ao longo do tempo.</p>
+<section class="steps-section">
+    <h1 class="title-header">Veja como é fácil usar <span class="gradient-text">Blazor Charts</span></h1>
+    <div class="container-cards-steps">
+        <div class="colum-step">
+            <div class="instalation-step">
+                <div class="bg-shadow-text">
+                    <span class="title-step">Instalação</span>
+                    <p class="desc-step">Primeiro vamos instalar nosso pacote nuget.</p>
+                </div>
+            </div>
+            <div class="html-step">
+                <div class="bg-shadow-text">
+                    <span class="title-step">Importe no HTML</span>
+                    <p class="desc-step">No header do nosso HTML configuramos 2 scripts</p>
+                </div>
+            </div>
         </div>
-        <div class="card-type">
-            <h3 class="title-type-card">Gráfico de Barras</h3>
-            <p>Ideal para comparar diferentes categorias e acompanhar tendências.</p>
-        </div>
-        <div class="card-type">
-            <h3 class="title-type-card">Gráfico de Pizza</h3>
-            <p>Compare proporções e distribuições de dados de forma visual e intuitiva.</p>
-        </div>
-    </div>
-    <div class="chart-type-list">
-        <div class="card-type">
-            <h3 class="title-type-card">Gráfico de Área</h3>
-            <p>Combine a estética de um gráfico de linhas com o destaque das áreas preenchidas.</p>
-        </div>
-        <div class="card-type">
-            <h3 class="title-type-card">Gráfico de Dispersão</h3>
-            <p>Analise correlações e padrões entre diferentes conjuntos de dados.</p>
-        </div>
-        <div class="card-type">
-            <h3 class="title-type-card">Gráfico Radar</h3>
-            <p>Compare múltiplas variáveis em um formato radial envolvente.</p>
+        <div class="colum-step">
+            <div class="import-step">
+                <div class="bg-shadow-text">
+                    <span class="title-step">Importe Razor</span>
+                    <p class="desc-step">Importe Blazor Charts Components em seu arquivo razor.</p>
+                </div>
+            </div>
+            <div class="ready-step">
+                <div class="bg-shadow-text">
+                    <span class="title-step">Pronto para usar</span>
+                    <p class="desc-step">Basta escolher seu componente gráfico e usar em suas aplicações.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>

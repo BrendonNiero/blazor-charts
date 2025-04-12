@@ -293,6 +293,112 @@ a:hover {
     gap: 3rem;
     align-items: center;
 }
+
+
+/*================================ steps =======================================*/
+
+.steps-section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.container-cards-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.colum-step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 400px;
+    width: 100%;
+}
+
+.instalation-step {
+    background-image: url("../wpp-instalation.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #38373c;
+    border-radius: 20px;
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.html-step {
+    background-image: url("../wpp-instalation-html.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #38373c;
+    border-radius: 20px;
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.import-step {
+    background-image: url("../wpp-instalation-using.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #38373c;
+    border-radius: 20px;
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ready-step {
+    background-image: url("../wpp-instalation-ready.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #38373c;
+    border-radius: 20px;
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bg-shadow-text {
+    background: linear-gradient(to bottom, rgba(17, 16, 21, 0) 0%, #111015 80%, #111015 100%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    padding: 3rem;
+}
+
+.title-step {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.desc-step {
+    font-size: 18px;
+}
+
 /* ================================== UTILS =======================================*/
 
 .active {
