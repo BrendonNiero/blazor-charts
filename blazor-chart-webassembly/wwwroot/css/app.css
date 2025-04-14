@@ -133,6 +133,11 @@ h1:focus {
 .title-doc {
     color: #fff;
     font-size: 30px;
+    margin-bottom: 1.5rem;
+}
+
+.p-doc {
+    margin-bottom: 1rem;
 }
 
 .navigations {

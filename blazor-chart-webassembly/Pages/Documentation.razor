@@ -1,19 +1,29 @@
 @page "/doc"
+@using BlazorChartsClassLibray.Components;
 
 <PageTitle>Documentação</PageTitle>
 
 <section class="doc-section">
     <blazor_chart_webassembly.Layout.SideMenu />
     <section class="doc-area">
-        <h1 class="title-header-doc">Documentação</h1>
-        <h2 class="title-doc">Instalação</h2>
+        <h1 class="title-header-doc">Primeiros passos</h1>
         <div class="line"></div>
-        <p class="mb-1">Alternatively, you can run them locally. To do so, clone the Chart.js repository from GitHub, 
+        <h2 class="title-doc">O que é o Blazor Charts?</h2>
+        <p class="p-doc">Alternatively, you can run them locally. To do so, clone the Chart.js repository from GitHub, 
             run pnpm ci to install all packages, then run pnpm run docs:dev to build the documentation. 
             As soon as the build is done, you can go to localhost:8080/samples to see the samples.</p>
-        <p>These samples are made for demonstration purposes only. They won't work out of the box if you 
+        <p class="p-doc">These samples are made for demonstration purposes only. They won't work out of the box if you 
             copy paste them into your own website. This is because of how the docs are getting built. Some 
             boilerplate code gets hidden. For a sample that can be copied and pasted and used directly you 
             can check the usage page.</p>
+        <div class="line"></div>
+        <LineGraph DataName="@DataName" Labels="@labels" DataPoints="@data" BackgroundColors="@colors"/>
     </section>
 </section>
+
+@code {
+    public string DataName = "Faturamento";
+    public List<string> labels = new() { "Jan", "Fev", "Mar", "Abr", "Mai",};
+    public List<int> data = new() { 10, 50, 30, 55, 66 };
+    public List<string> colors = new() { "#3fc598" };
+}
