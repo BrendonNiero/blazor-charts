@@ -307,7 +307,7 @@ a:hover {
     padding-left: 15rem;
     padding-right: 15rem;
     margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-bottom: 20rem;
 }
 
 .container-cards-steps {
@@ -378,7 +378,7 @@ a:hover {
 }
 
 .bg-shadow-text {
-    background: linear-gradient(to bottom, rgba(17, 16, 21, 0) 0%, #111015 80%, #111015 100%);
+    background: linear-gradient(to bottom, rgba(17, 16, 21, 0) 52%, #111015 86%, #111015 71%);
     height: 100%;
     width: 100%;
     display: flex;
@@ -399,6 +399,122 @@ a:hover {
     font-size: 18px;
 }
 
+/*---------- BENEFICIES SECTIONS ----------*/
+
+.how-to-use-beneficie {
+    background-image: url("../wpp-how-to-use.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #38373c;
+    border-radius: 20px;
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.js-beneficie {
+    background-image: url("../javascript-beneficie.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #38373c;
+    border-radius: 20px;
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.link-beneficie {
+    background-image: url("../wpp-link.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #38373c;
+    border-radius: 20px;
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.comparation-beneficie {
+    background-image: url("../wpp-graph-beneficies.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #38373c;
+    border-radius: 20px;
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+/* ================================== cta =======================================*/
+
+.cta-section {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../wpp-footer.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo-footer {
+    height: 150px;
+    padding: 0.2rem;
+    border: 1px solid #38373c;
+    background: rgb(36,35,40);
+    background: linear-gradient(180deg, rgba(36,35,40,1) 2%, rgba(17,16,21,1) 100%);  
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 0px 42px -12px rgba(0,255,150,1);
+    -moz-box-shadow: 0px 0px 42px -12px rgba(0,255,150,1);
+    box-shadow: 0px 0px 42px -12px rgba(0,255,150,1);
+    margin-bottom: 5rem;
+}
+
+.title-footer {
+    font-size: 45px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.desc-footer {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    color: #d4d4d8;
+}
+
+.footer {
+    width: 100%;
+    color: #d4d4d8;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.63);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-top: 1px solid #38373c;
+    padding: 5rem;
+}
+
 /* ================================== UTILS =======================================*/
 
 .active {
@@ -414,4 +530,11 @@ a:hover {
 
 .mb-1 {
     margin-bottom: 1rem;
+}
+
+.xl-p {
+    color: #bdbdbd;
+    font-size: 25px;
+    width: 800px;
+    text-align: center;
 }
