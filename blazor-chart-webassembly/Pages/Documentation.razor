@@ -9,21 +9,25 @@
         <h1 class="title-header-doc">Primeiros passos</h1>
         <div class="line"></div>
         <h2 class="title-doc">O que é o Blazor Charts?</h2>
-        <p class="p-doc">Alternatively, you can run them locally. To do so, clone the Chart.js repository from GitHub, 
-            run pnpm ci to install all packages, then run pnpm run docs:dev to build the documentation. 
-            As soon as the build is done, you can go to localhost:8080/samples to see the samples.</p>
-        <p class="p-doc">These samples are made for demonstration purposes only. They won't work out of the box if you 
-            copy paste them into your own website. This is because of how the docs are getting built. Some 
-            boilerplate code gets hidden. For a sample that can be copied and pasted and used directly you 
-            can check the usage page.</p>
+        <p class="p-doc">O Blazor Charts é um pacote NuGet desenvolvido para facilitar a criação de 
+            gráficos dinâmicos e interativos em aplicações Blazor, utilizando a poderosa 
+            biblioteca Chart.js.</p>
+        <p class="p-doc">A grande vantagem é que você não precisa escrever uma linha de JavaScript 
+            nem se preocupar com chamadas como JS. InvokeAsync ou a inclusão de scripts no HTML de 
+            forma manual. Tudo está pronto para funcionar com o mínimo de configuração!</p>
+        <DoubleBar DataName1="Primeiro" DataName2="Segundo" 
+        Color1="#13f287" Labels="@labels" Color2="#646cff" 
+        DataPoints1="@data1" DataPoints2="@data2" /> 
         <div class="line"></div>
-        <LineGraph DataName="@DataName" Labels="@labels" DataPoints="@data" BackgroundColors="@colors"/>
+        <h2 class="title-doc">Como instalar?</h2>
+        <p>Para instalar o pacote, utilize o seguinte comando:</p>
     </section>
 </section>
 
 @code {
     public string DataName = "Faturamento";
     public List<string> labels = new() { "Jan", "Fev", "Mar", "Abr", "Mai",};
-    public List<int> data = new() { 10, 50, 30, 55, 66 };
+    public List<int> data1 = new() { 100, 50, 30, 55, 66 };
+    public List<int> data2 = new() { -50, -100, -50, -55, -96 };
     public List<string> colors = new() { "#3fc598" };
 }
