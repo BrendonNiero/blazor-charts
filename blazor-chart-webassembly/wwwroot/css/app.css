@@ -117,7 +117,7 @@ h1:focus {
 
 .doc-section{
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .doc-area {
@@ -231,6 +231,70 @@ a:hover {
     background: linear-gradient(to bottom, #27e08b, #118c76);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.clip-code {
+    border: 1px solid #6a6a6e;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.header-clip-code {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #6a6a6e;
+}
+
+.code-section {
+    padding: 1rem;
+    counter-reset: line;
+}
+
+.title-html-clip-code {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #e34c26;
+}
+
+.title-terminal-clip-code {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+}
+
+.terminal-clip-code {
+    color: #fff;
+}
+
+.razor-clip-code {
+    color: #663399;
+}
+
+.button-clip {
+    font-size: 20px;
+    transition: 0.1s all ease;
+}
+.button-clip:hover {
+    color: #fff;
+}
+
+.line-code {
+    color: #ededed;
+    padding: 5px;
+}
+
+.line-code::before {
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    width: 2rem;
+    margin-right: 1rem;
+    color: #888;
 }
 
 

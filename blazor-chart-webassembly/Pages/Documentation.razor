@@ -23,12 +23,36 @@
         <p>Para instalar o pacote, utilize o seguinte comando:</p>
         <div class="clip-code">
             <div class="header-clip-code">
-                <div>
+                <div class="title-terminal-clip-code">
+                    <i class="fa-solid fa-terminal"></i>
                     <span>Terminal</span>
                 </div>
-                <button>COPIAR</button>
+                <button class="button-clip">
+                    <i class="fa-solid fa-clone"></i>
+                </button>
             </div>
-            <div class="code-section"></div>
+            <div class="code-section">
+                    <p class="line-code">
+                        dotnet add package BlazorChartsClassLibray
+                    </p>
+            </div>
+        </div>
+        <p>Em seguida, importe os scripts necessários no seu index.html (Blazor WebAssembly) ou _Host.cshtml (Blazor Server):</p>
+        <div class="clip-code">
+            <div class="header-clip-code">
+                <div class="title-html-clip-code">
+                    <i class="fa-brands fa-html5"></i>
+                    <span>index.html</span>
+                </div>
+                <button class="button-clip">
+                    <i class="fa-solid fa-clone"></i>
+                </button>
+            </div>
+            <div class="code-section">
+                @foreach(var clipCode in paragraphsCode){
+                    <p class="line-code">@clipCode</p>
+                }
+            </div>
         </div>
     </section>
 </section>
@@ -39,4 +63,8 @@
     public List<int> data1 = new() { 100, 50, 30, 55, 66 };
     public List<int> data2 = new() { -50, -100, -50, -55, -96 };
     public List<string> colors = new() { "#3fc598" };
+    IEnumerable<string> paragraphsCode = new List<string>{
+        $"<script src='https://cdn.jsdelivr.net/npm/chart.js'></script>",
+        $"<script src='_content/BlazorChartsClassLibray/chart.js'></script>"
+    };
 }
