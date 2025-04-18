@@ -1,0 +1,22 @@
+@using BlazorChartsClassLibray.Components;
+
+<h2 class="title-doc">O que é o Blazor Charts?</h2>
+<p class="p-doc">O Blazor Charts é um pacote NuGet desenvolvido para facilitar a criação de 
+    gráficos dinâmicos e interativos em aplicações Blazor, utilizando a poderosa 
+    biblioteca Chart.js.</p>
+<p class="p-doc">A grande vantagem é que você não precisa escrever uma linha de JavaScript 
+    nem se preocupar com chamadas como JS. InvokeAsync ou a inclusão de scripts no HTML de 
+    forma manual. Tudo está pronto para funcionar com o mínimo de configuração!</p>
+<DoubleBar DataName1="Primeiro" DataName2="Segundo" 
+Color1="#13f287" Labels="@labels" Color2="#646cff" 
+DataPoints1="@data1" DataPoints2="@data2" /> 
+<div class="line"></div>
+
+
+@code {
+    public string DataName = "Faturamento";
+    public List<string> labels = new() { "Jan", "Fev", "Mar", "Abr", "Mai",};
+    public List<int> data1 = new() { 100, 50, 30, 55, 66 };
+    public List<int> data2 = new() { -50, -100, -50, -55, -96 };
+    public List<string> colors = new() { "#3fc598" };
+}

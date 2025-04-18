@@ -1,0 +1,46 @@
+@page "/polar"
+@using blazor_chart_webassembly.Layout;
+@using BlazorChartsClassLibray.Components;
+
+<section class="doc-section">
+    <SideMenu />
+    <section class="doc-area">
+        <h1 class="title-header-doc">Gráfico Polar</h1>
+        <div class="line"></div>
+        <PolarChart DataName="@DataName" Labels="@labels" DataPoints="@data" BackgroundColors="@colors"/>
+        <div class="clip-code">
+            <div class="header-clip-code">
+                <div class="title-razor-clip-code">
+                    <i class="fa-solid fa-at"></i>
+                    <span>Home.razor</span>
+                </div>
+                <button class="button-clip">
+                    <i class="fa-solid fa-clone"></i>
+                </button>
+            </div>
+            <div class="code-section">
+                @foreach(var clipCode in paragraphsCode){
+                    <p class="line-code">@clipCode</p>
+                }
+            </div>
+        </div>
+    </section>
+</section>
+
+
+@code {
+    public string DataName = "Faturamento";
+    public List<string> labels = new() { "Jan", "Fev", "Mar", "Abr", "Mai",};
+    public List<int> data = new() { 10, 50, 30, 55, 66 };
+    public List<string> colors = new() { "#3fc598", "#f3f3f3", "#2a2a2a", "#616161", "#2ef64a" };
+    IEnumerable<string> paragraphsCode = new List<string>{
+        """"<LineGraph DataName="@DataName" Labels="@labels" DataPoints="@data" BackgroundColors="@colors"/>"""",
+        "",
+        """"@code {"""",
+        """"public string DataName = "Faturamento";"""",
+        """"public List<string> labels = new() { "Jan", "Fev", "Mar", "Abr", "Mai",};"""",
+        """"public List<int> data = new() { 10, 50, 30, 55, 66 };"""",
+        """"public List<string> colors = new() { "#3fc598" };"""",
+        """"}""""
+    };
+}

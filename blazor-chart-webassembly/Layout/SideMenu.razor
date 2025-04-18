@@ -2,6 +2,10 @@
 @inject NavigationManager Navigation
 
 <aside class="sidebar">
+        <NavLink href="/" class="logo-home">
+        <img class="logo" src="./logo-b-c.png" />
+        <h1 class="title-logo-tining">BlazorCharts</h1>
+    </NavLink>
     <MudPaper Width="250px" Class="d-inline-flex py-3" Elevation="0">
         <MudNavMenu Class="mud-width-full">
             <MudNavLink Href="/doc" Icon="@Icons.Material.Filled.ArrowDownward" Class="@(IsActive("/doc") ? "active" : "")">
@@ -11,6 +15,7 @@
         <MudNavGroup Icon="@Icons.Material.Filled.BarChart" Title="Gráficos" Class="custom-nav">  
             <MudNavLink Href="/linha" Class="@(IsActive("/linha") ? "active" : "")">Linha</MudNavLink>
             <MudNavLink Href="/barra" Class="@(IsActive("/barra") ? "active" : "")">Barra</MudNavLink>
+            <MudNavLink Href="/polar" Class="@(IsActive("/polar") ? "active" : "")">Polar</MudNavLink>
             <MudNavLink Href="/doughnut" Class="@(IsActive("/doughnut") ? "active" : "")">Doughnut</MudNavLink>
             <MudNavLink Href="/pizza" Class="@(IsActive("/pizza") ? "active" : "")">Pizza</MudNavLink>
         </MudNavGroup>

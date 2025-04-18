@@ -1,0 +1,36 @@
+<h2 class="title-doc">Como usar?</h2>
+<div class="custom-block-anotation">
+    <span class="title-anotation">Anotação</span>
+    <p>Para começar a usar os gráficos, acesse a seção Gráficos da documentação e confira os componentes disponíveis.</p>
+</div>
+<div class="clip-code">
+    <div class="header-clip-code">
+        <div class="title-razor-clip-code">
+            <i class="fa-solid fa-at"></i>
+            <span>Home.razor</span>
+        </div>
+        <button class="button-clip">
+            <i class="fa-solid fa-clone"></i>
+        </button>
+    </div>
+    <div class="code-section">
+        @foreach(var clipCode in paragraphsCode){
+            <p class="line-code">@clipCode</p>
+        }
+    </div>
+</div>
+
+
+@code {
+    IEnumerable<string> paragraphsCode = new List<string>{
+        """"<LineGraph DataName="@DataName" Labels="@labels" DataPoints="@data" BackgroundColors="@colors"/>"""",
+        "",
+        """"@code {"""",
+        """"public string DataName = "Faturamento";"""",
+        """"public List<string> labels = new() { "Jan", "Fev", "Mar", "Abr", "Mai",};"""",
+        """"public List<int> data = new() { 10, 50, 30, 55, 66 };"""",
+        """"public List<string> colors = new() { "#3fc598" };"""",
+        """"}""""
+    };
+}
+
