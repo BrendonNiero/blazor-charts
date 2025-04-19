@@ -13,6 +13,7 @@ body {
     min-height: 100vh;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif !important;
+    color-scheme: dark;
 }
 
 h1 {
@@ -173,7 +174,7 @@ h1:focus {
 }
 
 .title-logo-tining {
-    font-size: 20px;
+    font-size: 30px;
     color: #fff;
     font-weight: 100;
 }

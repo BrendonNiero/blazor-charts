@@ -1,15 +1,13 @@
-@page "/barra-dupla"
+@page "/torta"
 @using blazor_chart_webassembly.Layout;
 @using BlazorChartsClassLibray.Components;
 
 <section class="doc-section">
     <SideMenu />
     <section class="doc-area">
-        <h1 class="title-header-doc">Gráfico de Barra Dupla</h1>
+        <h1 class="title-header-doc">Gráfico de Torta</h1>
         <div class="line"></div>
-        <DoubleBar DataName1="Primeiro" DataName2="Segundo" 
-        Color1="#13f287" Labels="@labels" Color2="#646cff" 
-        DataPoints1="@data1" DataPoints2="@data2" /> 
+        <CharPie DataName="Faturamento" BackgroundColors="@colors" DataPoints="@data" Labels="@labels" />
         <div class="clip-code">
             <div class="header-clip-code">
                 <div class="title-razor-clip-code">
@@ -32,15 +30,15 @@
 
 @code {
     public List<string> labels = new() { "Jan", "Fev", "Mar", "Abr", "Mai",};
-    public List<int> data1 = new() { 100, 50, 30, 55, 66 };
-    public List<int> data2 = new() { -50, -100, -50, -55, -96 };
+    public List<int> data = new() { 10, 50, 30, 55, 66 };
+    public List<string> colors = new() { "#3fc598", "#646cff", "#ff5733", "#ffc300", "#ef436b" };
     IEnumerable<string> paragraphsCode = new List<string>{
-        """"<DoubleBar DataName1="Primeiro" DataName2="Segundo" Color1="#13f287" Labels="@labels" Color2="#646cff" DataPoints1="@data1" DataPoints2="@data2" /> """",
+        """"<CharDoughnut DataName="Faturamento" BackgroundColors="@colors" DataPoints="@data" Labels="@labels" />"""",
         "",
         """"@code {"""",
         """"public List<string> labels = new() { "Jan", "Fev", "Mar", "Abr", "Mai",};"""",
-        """"public List<int> data1 = new() { 10, 50, 30, 55, 66 };"""",
-        """"public List<int> data2 = new() { -50, -100, -50, -55, -96 };"""",
+        """"public List<int> data = new() { 10, 50, 30, 55, 66 };"""",
+        """"public List<string> colors = new() { "#3fc598", "#646cff", "#ff5733", "#ffc300", "#ef436b" };"""",
         """"}""""
     };
 }

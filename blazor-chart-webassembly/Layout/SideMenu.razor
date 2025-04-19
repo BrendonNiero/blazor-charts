@@ -12,17 +12,13 @@
             Instalação
         </MudNavLink>
 
-        <MudNavGroup Icon="@Icons.Material.Filled.BarChart" Title="Gráficos" Class="custom-nav">  
+        <MudNavGroup Icon="@Icons.Material.Filled.BarChart" Title="Gráficos" Class="custom-nav" Expanded="true">  
             <MudNavLink Href="/linha" Class="@(IsActive("/linha") ? "active" : "")">Linha</MudNavLink>
-            <MudNavLink Href="/barra" Class="@(IsActive("/barra") ? "active" : "")">Barra</MudNavLink>
+            <MudNavLink Href="/barra-dupla" Class="@(IsActive("/barra-dupla") ? "active" : "")">Barra Dupla</MudNavLink>
             <MudNavLink Href="/polar" Class="@(IsActive("/polar") ? "active" : "")">Polar</MudNavLink>
             <MudNavLink Href="/doughnut" Class="@(IsActive("/doughnut") ? "active" : "")">Doughnut</MudNavLink>
-            <MudNavLink Href="/pizza" Class="@(IsActive("/pizza") ? "active" : "")">Pizza</MudNavLink>
+            <MudNavLink Href="/torta" Class="@(IsActive("/torta") ? "active" : "")">Torta</MudNavLink>
         </MudNavGroup>
-
-        <MudNavLink Href="/legenda" Icon="@Icons.Material.Filled.ShortText" Class="@(IsActive("/legenda") ? "active" : "")">
-            Legenda
-        </MudNavLink>
 
         <MudNavLink Href="/duvidas" Icon="@Icons.Material.Filled.FormatQuote" Class="@(IsActive("/duvidas") ? "active" : "")">
             Dúvidas Frequentes

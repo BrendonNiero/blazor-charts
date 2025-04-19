@@ -1,0 +1,45 @@
+@page "/duvidas"
+@using MudBlazor;
+
+<MudPaper Class="pa-4">
+    <MudText Typo="Typo.h5" GutterBottom="true">Perguntas Frequentes</MudText>
+
+    <MudExpansionPanels MultiExpansion="false">
+        @foreach (var item in Faqs)
+        {
+            <MudExpansionPanel Text="@item.Pergunta">
+                <MudText Typo="Typo.body2">@item.Resposta</MudText>
+            </MudExpansionPanel>
+        }
+    </MudExpansionPanels>
+</MudPaper>
+
+@code {
+    // Modelo simples para FAQ
+    class FaqItem
+    {
+        public string Pergunta { get; set; }
+        public string Resposta { get; set; }
+    }
+
+    // Lista de perguntas e respostas
+    List<FaqItem> Faqs = new()
+    {
+        new FaqItem
+        {
+            Pergunta = "Como instalo o pacote Blazor Charts?",
+            Resposta = "Basta executar `dotnet add package BlazorCharts.ChartJS` e registrar o serviço com `builder.Services.AddBlazorCharts();`."
+        },
+        new FaqItem
+        {
+            Pergunta = "Quais tipos de gráficos são suportados?",
+            Resposta = "O pacote suporta Line, Bar, Pie/Doughnut, Radar, PolarArea, Area, Scatter e Mix."
+        },
+        new FaqItem
+        {
+            Pergunta = "Como passo dados dinâmicos para o gráfico?",
+            Resposta = "Vincule uma propriedade `ChartData<T>` ao parâmetro `Data` do componente `<Chart>` e chame `StateHasChanged()` após atualizar."
+        },
+        // …adicione quantos itens precisar
+    };
+}
