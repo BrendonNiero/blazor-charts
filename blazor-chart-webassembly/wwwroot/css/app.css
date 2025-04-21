@@ -220,7 +220,7 @@ h1:focus {
     outline: none;
     border: none;
     padding: 15px 20px 15px 20px;
-    color: #111015;
+    color: #111015 !important;
     border-radius: 50px;
     cursor: pointer;
     font-weight: 500;
@@ -398,6 +398,7 @@ a:hover {
 
 .steps-section {
     height: 100%;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -563,6 +564,7 @@ a:hover {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
 
 .footer-content {
@@ -601,6 +603,7 @@ a:hover {
 
 .footer {
     width: 100%;
+    text-align: center;
     color: #d4d4d8;
     font-size: 20px;
     display: flex;
@@ -612,6 +615,14 @@ a:hover {
     -webkit-backdrop-filter: blur(5px);
     border-top: 1px solid #38373c;
     padding: 5rem;
+}
+
+.expansion-quote {
+    border: 1px solid #6a6a6e !important;
+    padding: 1rem !important;
+    border-radius: 5px !important;
+    color: #fff !important;
+    margin-bottom: 0.5rem !important;
 }
 
 /* ================================== UTILS =======================================*/
@@ -636,4 +647,106 @@ a:hover {
     font-size: 25px;
     width: 800px;
     text-align: center;
+}
+/* ================================== MOBILE ====================================*/
+
+@media (max-width: 768px){
+    /* - NAVBAR - */
+    .nav {
+        padding: 1rem;
+    }
+    .logo-home {
+        gap: 0.3rem;
+    }
+    .title-logo {
+        font-size: 20px;
+    }
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+    /* - HEADER HOME - */
+    .header-home {
+        padding: 1rem;
+    }
+    .title-header {
+        font-size: 2rem;
+        width: auto;
+    }
+    .xl-p {
+        font-size: 20px;
+        width: auto;
+    }
+    /* - STEPS SECTION - */
+    .colum-step {
+        flex-direction: column;
+        height: 100%;
+    }
+    .steps-section {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-top: 0;
+        margin-bottom: 5rem;
+    }
+    .instalation-step {
+        width: 100%;
+    }
+    .html-step {
+        width: 100%;
+    }
+    .import-step {
+        width: 100%;
+    }
+    .ready-step {
+        width: 100%;
+    }
+    .how-to-use-beneficie {
+        width: 100%;
+    }
+    .js-beneficie {
+        width: 100%;
+    }
+    .link-beneficie {
+        width: 100%;
+    }
+    .comparation-beneficie {
+        width: 100%;
+    }
+    .bg-shadow-text {
+        background: linear-gradient(to bottom, rgba(17, 16, 21, 0) 0%, #111015 50%, #111015 91%);
+        height: 100%;
+    }
+
+    .cta-section {
+        height: 100%;
+        margin-top: 10rem;
+    }
+    .footer-content {
+        padding: 1rem;
+    }
+    .text-to-install {
+        font-size: 10px;
+    }
+    .clipboard-area {
+        justify-content: space-between;
+    }
+    .btn-clip {
+        font-size: 20px;
+    }
+    .sidebar {
+        display: none;
+    }
+    .doc-area {
+        padding: 1rem;
+    }
+    .line-code {
+        font-size: 10px;
+    }
+    .line-code::before{
+        width: auto;
+    }
+    .code-section {
+        overflow-x: scroll;
+        width: fit-content;
+    }
 }

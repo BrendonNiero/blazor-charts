@@ -2,7 +2,7 @@
 @inject IJSRuntime JS
 
 <div class="clipboard-area">
-    <span>@textToCopy</span>
+    <span class="text-to-install">@textToCopy</span>
         <button class="btn-clip" onclick="@(() => CopyToClipboard(textToCopy))">
             @if(!clipped){
                 <i class="fa-solid fa-clone"></i>
@@ -13,7 +13,7 @@
 </div>
 
 @code {
-    private string textToCopy = "dotnet add package BlazorChartsClassLibray --version 1.0.15";
+    private string textToCopy = "dotnet add package BlazorChartsClassLibray";
     public bool clipped { get; set; } = false;
 
     private async Task CopyToClipboard(string text)
