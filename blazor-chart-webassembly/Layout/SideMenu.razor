@@ -27,7 +27,49 @@
     </MudPaper>
 </aside>
 
+<nav class="mobile-nav">
+    <div class="header-nav">
+        <NavLink class="logo-mobile-section" href="/">
+            <img class="logo-mobile" src="./logo-b-c.png" />
+            <h1 class="title-logo-mobile">BlazorCharts</h1>
+        </NavLink>
+        <button onclick="@(() => ToggleMenu())" class="icon-toggle-modal">
+            @if(!IsMenuOpen){
+                <i class="fa-solid fa-bars"></i>
+            } else {
+                <i class="fa-solid fa-xmark"></i>
+            }
+        </button>
+    </div>
+    @if(IsMenuOpen){
+        <section class="links-mobile">
+            <MudPaper Class="d-inline-flex py-3" Elevation="0">
+                <MudNavMenu Class="mud-width-full">
+                    <MudNavLink Href="/doc" Icon="@Icons.Material.Filled.ArrowDownward">
+                        Instalação
+                    </MudNavLink>
+                    <MudNavGroup Icon="@Icons.Material.Filled.BarChart" Title="Gráficos" Class="custom-nav" Expanded="true">  
+                        <MudNavLink Href="/linha" Class="@(IsActive("/linha") ? "active" : "")">Linha</MudNavLink>
+                        <MudNavLink Href="/barra-dupla" Class="@(IsActive("/barra-dupla") ? "active" : "")">Barra Dupla</MudNavLink>
+                        <MudNavLink Href="/polar">Polar</MudNavLink>
+                        <MudNavLink Href="/doughnut">Doughnut</MudNavLink>
+                        <MudNavLink Href="/torta">Torta</MudNavLink>
+                    </MudNavGroup>
+                    <MudNavLink Href="/duvidas" Icon="@Icons.Material.Filled.FormatQuote">
+                        Dúvidas Frequentes
+                    </MudNavLink>
+                </MudNavMenu>
+            </MudPaper>
+        </section>
+    }
+</nav>
+
 @code {
+    public bool IsMenuOpen { get; set; } = false;
+
+    public void ToggleMenu(){
+        IsMenuOpen = !IsMenuOpen;
+    }
     private bool IsActive(string href)
     {
         return Navigation.Uri.EndsWith(href, StringComparison.OrdinalIgnoreCase);

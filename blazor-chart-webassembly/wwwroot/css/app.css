@@ -108,6 +108,7 @@ h1:focus {
 }
 
 .sidebar {
+    display: none;
     border-right: 1px solid #38373c;
     padding: 2rem;
     width: auto;
@@ -248,6 +249,7 @@ a:hover {
     margin-top: 1rem;
     margin-bottom: 2rem;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .header-clip-code {
@@ -261,6 +263,9 @@ a:hover {
 .code-section {
     padding: 1rem;
     counter-reset: line;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-family: monospace;
 }
 
 .title-html-clip-code {
@@ -648,6 +653,53 @@ a:hover {
     width: 800px;
     text-align: center;
 }
+/* ============================== MOBILE MENU ====================================*/
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(17, 16, 21, 0.76);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.6px);
+    -webkit-backdrop-filter: blur(10.6px);
+    border-bottom: 1px solid #6a6a6e;
+}
+
+.links-mobile {
+    height: 100vh;
+}
+
+.logo-mobile {
+    height: 50px;
+}
+
+.icon-toggle-modal {
+    font-size: 30px;
+    color: #fff;
+}
+
+.logo-mobile-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.title-logo-mobile {
+    font-size: 20px;
+    color: #fff;
+}
+
 /* ================================== MOBILE ====================================*/
 
 @media (max-width: 768px){
@@ -738,6 +790,10 @@ a:hover {
     }
     .doc-area {
         padding: 1rem;
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+        height: auto; /* Remove a altura fixa */
+        overflow-y: visible; /* Remove o scroll interno */
     }
     .line-code {
         font-size: 10px;
@@ -745,8 +801,7 @@ a:hover {
     .line-code::before{
         width: auto;
     }
-    .code-section {
-        overflow-x: scroll;
-        width: fit-content;
+    .mobile-nav {
+        display: flex;
     }
 }
