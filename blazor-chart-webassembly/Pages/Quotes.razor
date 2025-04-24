@@ -29,12 +29,22 @@
         new FaqItem
         {
             Question = "Como instalo o pacote Blazor Charts?",
-            Answer = "Basta executar  dotnet add package BlazorChartsClassLibray, importar <script src='https://cdn.jsdelivr.net/npm/chart.js'></script> e <script src='_content/BlazorChartsClassLibray/chart.js'></script> no head do seu arquivo html, e depois importar @using BlazorChartsClassLibray.Components;"
+            Answer = "Basta executar 'dotnet add package BlazorChartsClassLibray', importar os scripts no head do seu HTML, e usar a diretiva @using em seu arquivo razor."
         },
         new FaqItem
         {
             Question = "Quais tipos de gráficos são suportados?",
-            Answer = "O pacote suporta Line, Bar, Pie/Doughnut, Radar, PolarArea, Area, Scatter e Mix."
-        }
+            Answer = "O pacote suporta LineGraph, ProgressBar, DoubleBar, Polar, Doughnut, Pie."
+        },
+        new FaqItem
+        {
+            Question = "Posso contribuir com o projeto?",
+            Answer = "Claro! Você pode enviar suas sugestões, correções ou novos recursos por meio de pull requests no nosso repositório do GitHub. Toda contribuição é bem-vinda e será analisada com carinho."
+        },
+        new FaqItem
+        {
+            Question = "O projeto terá atualizações futuras?",
+            Answer = "Sim! Nossa meta é expandir o catálogo de componentes para Blazor. Em breve, vamos incluir integração com bibliotecas além do Chart.js, oferecendo ainda mais opções e flexibilidade para os desenvolvedores."
+        },
     };
 }

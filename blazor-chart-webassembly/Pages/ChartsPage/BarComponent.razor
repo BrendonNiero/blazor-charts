@@ -1,4 +1,4 @@
-@page "/linha"
+@page "/barra"
 @using blazor_chart_webassembly.Layout;
 @using BlazorChartsClassLibray.Components;
 @using MudBlazor;
@@ -6,11 +6,11 @@
 <section class="doc-section">
     <SideMenu />
     <section class="doc-area">
-        <h1 class="title-header-doc">Gráfico de Linha</h1>
+        <h1 class="title-header-doc">Gráfico de Barra</h1>
         <div class="line"></div>
         <div class="horizontal-bar">
             <div class="chart-responsive">
-                <LineGraph DataName="@DataName" Labels="@labels" DataPoints="@data" BackgroundColors="@colors"/>
+                <ProgressBar DataName="@DataName" Labels="@labels" DataPoints="@data" BackgroundColors="@colors"/>
             </div>
         </div>
         <div class="clip-code">
@@ -68,7 +68,7 @@
     public List<string> colors = new() { "#3fc598" };
     private string MarkdownText = @"
 ```csharp
-<LineGraph DataName=""@DataName"" Labels=""@labels"" 
+<ProgressBar DataName=""@DataName"" Labels=""@labels"" 
            DataPoints=""@data"" BackgroundColors=""@colors""/>
 
 @code{

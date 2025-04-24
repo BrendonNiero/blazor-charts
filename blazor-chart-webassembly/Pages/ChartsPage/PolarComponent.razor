@@ -1,4 +1,4 @@
-@page "/linha"
+@page "/polar"
 @using blazor_chart_webassembly.Layout;
 @using BlazorChartsClassLibray.Components;
 @using MudBlazor;
@@ -6,13 +6,9 @@
 <section class="doc-section">
     <SideMenu />
     <section class="doc-area">
-        <h1 class="title-header-doc">Gráfico de Linha</h1>
+        <h1 class="title-header-doc">Gráfico Polar</h1>
         <div class="line"></div>
-        <div class="horizontal-bar">
-            <div class="chart-responsive">
-                <LineGraph DataName="@DataName" Labels="@labels" DataPoints="@data" BackgroundColors="@colors"/>
-            </div>
-        </div>
+        <Polar DataName="@DataName" Labels="@labels" DataPoints="@data" BackgroundColors="@colors"/>
         <div class="clip-code">
             <div class="header-clip-code">
                 <div class="title-razor-clip-code">
@@ -64,18 +60,17 @@
 @code {
     public string DataName = "Faturamento";
     public List<string> labels = new() { "Jan", "Fev", "Mar", "Abr", "Mai",};
-    public List<int> data = new() { 10, 50, 30, 55, 66 };
-    public List<string> colors = new() { "#3fc598" };
+    public List<int> data = new() { 50, 50, 30, 55, 66 };
+    public List<string> colors = new() { "#3fc598", "#646cff", "#ff5733", "#ffc300", "#ef436b" };    
     private string MarkdownText = @"
 ```csharp
-<LineGraph DataName=""@DataName"" Labels=""@labels"" 
-           DataPoints=""@data"" BackgroundColors=""@colors""/>
+<Polar DataName=""Faturamento"" BackgroundColors=""@colors"" DataPoints=""@data"" Labels=""@labels"" />
 
 @code{
     public string DataName = ""Faturamento"";
     public List<string> labels = new() { ""Jan"", ""Fev"", ""Mar"", ""Abr"", ""Mai""};
     public List<int> data = new() { 10, 50, 30, 55, 66 };
-    public List<string> colors = new() { ""#3fc598"" };
+    public List<string> colors = new() { ""#3fc598"", ""#646cff"", ""#ff5733"", ""#ffc300"", ""#ef436b"" };
 }
 ```";
 }

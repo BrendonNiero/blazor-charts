@@ -4,6 +4,8 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -331,6 +333,7 @@ a:hover {
     padding: 1rem;
     border-radius: 10px;
     max-width: 600px;
+    margin-bottom: 1rem;
 }
 
 /*================================= HEADER =================================*/
@@ -614,6 +617,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     background: rgba(0, 0, 0, 0.63);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -678,6 +682,8 @@ a:hover {
 
 .links-mobile {
     height: 100vh;
+    padding-top: 2rem;
+    font-size: 20px;
 }
 
 .logo-mobile {
@@ -804,4 +810,100 @@ a:hover {
     .mobile-nav {
         display: flex;
     }
+    .expansion-quote {
+        padding: 0.5rem !important;
+        font-size: 18px;
+    }
+    .expansion-quote p {
+        color: #888 !important;
+    }
 }
+
+.language-csharp {
+    background-color: #111015 !important;
+    color: #fff !important;
+}
+
+.hljs-string {
+    color: #646cff !important;
+}
+
+.hljs-number {
+    color: #e34c26 !important;
+}
+
+.hljs-keyword {
+    color: #f27713 !important;
+}
+
+.hljs-built_in {
+    color: #f2134b !important;
+}
+
+.mud-button-root {
+    border-radius: 5px !important;
+    background-color: #13f287 !important;
+    color: #fff !important;
+    transition: 0.2s all ease !important;
+}
+
+.mud-button-root:hover {
+    background-color: #22b86f !important;
+}
+
+.table-section {
+    overflow: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #6a6a6e;
+    text-align: start;
+    overflow-x: auto;
+    margin-bottom: 5rem;
+}
+
+thead {
+    color: #fff;
+}
+
+td, th {
+    padding: 0.6em 1em;
+    border: 1px solid #6a6a6e;
+}
+
+.tag-type {
+    color: #bcc0ff;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(100, 108, 255, 0.08);
+}
+
+.tag-name {
+    color: #f27713;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 185, 100, 0.08);
+}
+
+
+.github-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #6a6a6e;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 50px;
+}
+
+.horizontal-bar {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.chart-responsive {
+    overflow-x: auto;
+    min-width: 600px;
+}
+

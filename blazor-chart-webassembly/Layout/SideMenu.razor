@@ -8,12 +8,13 @@
     </NavLink>
     <MudPaper Width="250px" Class="d-inline-flex py-3" Elevation="0">
         <MudNavMenu Class="mud-width-full">
-            <MudNavLink Href="/doc" Icon="@Icons.Material.Filled.ArrowDownward" Class="@(IsActive("/doc") ? "active" : "")">
+        <MudNavLink Href="/doc" Icon="@Icons.Material.Filled.ArrowDownward" Class="@(IsActive("/doc") ? "active" : "")">
             Instalação
         </MudNavLink>
 
         <MudNavGroup Icon="@Icons.Material.Filled.BarChart" Title="Gráficos" Class="custom-nav" Expanded="true">  
             <MudNavLink Href="/linha" Class="@(IsActive("/linha") ? "active" : "")">Linha</MudNavLink>
+            <MudNavLink Href="/barra" Class="@(IsActive("/barra") ? "active" : "")">Barra</MudNavLink>
             <MudNavLink Href="/barra-dupla" Class="@(IsActive("/barra-dupla") ? "active" : "")">Barra Dupla</MudNavLink>
             <MudNavLink Href="/polar" Class="@(IsActive("/polar") ? "active" : "")">Polar</MudNavLink>
             <MudNavLink Href="/doughnut" Class="@(IsActive("/doughnut") ? "active" : "")">Doughnut</MudNavLink>
@@ -50,6 +51,7 @@
                     </MudNavLink>
                     <MudNavGroup Icon="@Icons.Material.Filled.BarChart" Title="Gráficos" Class="custom-nav" Expanded="true">  
                         <MudNavLink Href="/linha" Class="@(IsActive("/linha") ? "active" : "")">Linha</MudNavLink>
+                        <MudNavLink Href="/barra" Class="@(IsActive("/barra") ? "active" : "")">Barra</MudNavLink>
                         <MudNavLink Href="/barra-dupla" Class="@(IsActive("/barra-dupla") ? "active" : "")">Barra Dupla</MudNavLink>
                         <MudNavLink Href="/polar">Polar</MudNavLink>
                         <MudNavLink Href="/doughnut">Doughnut</MudNavLink>
