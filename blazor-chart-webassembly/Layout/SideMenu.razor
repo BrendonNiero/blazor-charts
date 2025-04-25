@@ -2,26 +2,26 @@
 @inject NavigationManager Navigation
 
 <aside class="sidebar">
-        <NavLink href="/" class="logo-home">
+        <NavLink href="" class="logo-home">
         <img class="logo" src="./logo-b-c.png" />
         <h1 class="title-logo-tining">BlazorCharts</h1>
     </NavLink>
     <MudPaper Width="250px" Class="d-inline-flex py-3" Elevation="0">
         <MudNavMenu Class="mud-width-full">
-        <MudNavLink Href="/doc" Icon="@Icons.Material.Filled.ArrowDownward" Class="@(IsActive("/doc") ? "active" : "")">
+        <MudNavLink Href="doc" Icon="@Icons.Material.Filled.ArrowDownward" Class="@(IsActive("/doc") ? "active" : "")">
             Instalação
         </MudNavLink>
 
         <MudNavGroup Icon="@Icons.Material.Filled.BarChart" Title="Gráficos" Class="custom-nav" Expanded="true">  
-            <MudNavLink Href="/linha" Class="@(IsActive("/linha") ? "active" : "")">Linha</MudNavLink>
-            <MudNavLink Href="/barra" Class="@(IsActive("/barra") ? "active" : "")">Barra</MudNavLink>
-            <MudNavLink Href="/barra-dupla" Class="@(IsActive("/barra-dupla") ? "active" : "")">Barra Dupla</MudNavLink>
-            <MudNavLink Href="/polar" Class="@(IsActive("/polar") ? "active" : "")">Polar</MudNavLink>
-            <MudNavLink Href="/doughnut" Class="@(IsActive("/doughnut") ? "active" : "")">Doughnut</MudNavLink>
-            <MudNavLink Href="/torta" Class="@(IsActive("/torta") ? "active" : "")">Torta</MudNavLink>
+            <MudNavLink Href="linha" Class="@(IsActive("/linha") ? "active" : "")">Linha</MudNavLink>
+            <MudNavLink Href="barra" Class="@(IsActive("/barra") ? "active" : "")">Barra</MudNavLink>
+            <MudNavLink Href="barra-dupla" Class="@(IsActive("/barra-dupla") ? "active" : "")">Barra Dupla</MudNavLink>
+            <MudNavLink Href="polar" Class="@(IsActive("/polar") ? "active" : "")">Polar</MudNavLink>
+            <MudNavLink Href="doughnut" Class="@(IsActive("/doughnut") ? "active" : "")">Doughnut</MudNavLink>
+            <MudNavLink Href="torta" Class="@(IsActive("/torta") ? "active" : "")">Torta</MudNavLink>
         </MudNavGroup>
 
-        <MudNavLink Href="/duvidas" Icon="@Icons.Material.Filled.FormatQuote" Class="@(IsActive("/duvidas") ? "active" : "")">
+        <MudNavLink Href="duvidas" Icon="@Icons.Material.Filled.FormatQuote" Class="@(IsActive("/duvidas") ? "active" : "")">
             Dúvidas Frequentes
         </MudNavLink>
         </MudNavMenu>
@@ -46,18 +46,18 @@
         <section class="links-mobile">
             <MudPaper Class="d-inline-flex py-3" Elevation="0">
                 <MudNavMenu Class="mud-width-full">
-                    <MudNavLink Href="/doc" Icon="@Icons.Material.Filled.ArrowDownward">
+                    <MudNavLink Href="doc" Icon="@Icons.Material.Filled.ArrowDownward">
                         Instalação
                     </MudNavLink>
                     <MudNavGroup Icon="@Icons.Material.Filled.BarChart" Title="Gráficos" Class="custom-nav" Expanded="true">  
-                        <MudNavLink Href="/linha" Class="@(IsActive("/linha") ? "active" : "")">Linha</MudNavLink>
-                        <MudNavLink Href="/barra" Class="@(IsActive("/barra") ? "active" : "")">Barra</MudNavLink>
-                        <MudNavLink Href="/barra-dupla" Class="@(IsActive("/barra-dupla") ? "active" : "")">Barra Dupla</MudNavLink>
-                        <MudNavLink Href="/polar">Polar</MudNavLink>
-                        <MudNavLink Href="/doughnut">Doughnut</MudNavLink>
-                        <MudNavLink Href="/torta">Torta</MudNavLink>
+                        <MudNavLink Href="linha" Class="@(IsActive("/linha") ? "active" : "")">Linha</MudNavLink>
+                        <MudNavLink Href="barra" Class="@(IsActive("/barra") ? "active" : "")">Barra</MudNavLink>
+                        <MudNavLink Href="barra-dupla" Class="@(IsActive("/barra-dupla") ? "active" : "")">Barra Dupla</MudNavLink>
+                        <MudNavLink Href="polar">Polar</MudNavLink>
+                        <MudNavLink Href="doughnut">Doughnut</MudNavLink>
+                        <MudNavLink Href="torta">Torta</MudNavLink>
                     </MudNavGroup>
-                    <MudNavLink Href="/duvidas" Icon="@Icons.Material.Filled.FormatQuote">
+                    <MudNavLink Href="duvidas" Icon="@Icons.Material.Filled.FormatQuote">
                         Dúvidas Frequentes
                     </MudNavLink>
                 </MudNavMenu>
