@@ -30,22 +30,26 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
-      - name: Instalar Wasm Tools
+      - name: Instalar .NET Wasm Tools
         run: dotnet workload install wasm-tools
 
       - name: Restaurar Dependências
         run: dotnet restore
 
-      - name: Build
+      - name: Compilar
         run: dotnet build -c Release --no-restore
 
       - name: Publicar Blazor em docs
-        run: dotnet publish blazor-chart-webassembly.csproj -c Release -o docs --nologo
+        run: dotnet publish blazor-chart-webassembly/blazor-chart-webassembly.csproj \
+               -c Release -o docs --nologo
+
+      - name: Recriar .nojekyll
+        run: touch docs/.nojekyll
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload para GitHub Pages
+      - name: Enviar artefato para Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
