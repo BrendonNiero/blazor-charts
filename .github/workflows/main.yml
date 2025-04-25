@@ -40,8 +40,8 @@ jobs:
         run: dotnet build -c Release --no-restore
 
       - name: Publicar Blazor em docs
-        run: dotnet publish blazor-chart-webassembly/blazor-chart-webassembly.csproj \
-               -c Release -o docs --nologo
+        run: dotnet publish blazor-chart-webassembly/blazor-chart-webassembly.csproj -c Release -o docs --nologo
+
 
       - name: Recriar .nojekyll
         run: touch docs/.nojekyll
