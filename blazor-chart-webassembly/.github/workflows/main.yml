@@ -1,9 +1,8 @@
-name: Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: ["main"]
-
   workflow_dispatch:
 
 permissions:
@@ -11,45 +10,50 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   deploy:
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Configurando .NET
-        uses: actions/setup-dotnet@v3 
+      - name: Setup .NET 8 SDK
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 8.0.x
 
-      - name: Instalando .NET Wasm Tools
+      - name: Install WASM workload
         run: dotnet workload install wasm-tools
 
-      - name: Restaurando as Dependências
+      - name: Restore dependencies
         run: dotnet restore
 
-      - name: Build
+      - name: Build project
         run: dotnet build -c Release --no-restore
 
-      - name: Criando o Publish
-        run: dotnet publish blazor-chart-webassembly.csproj -c:Release -o docs --nologo
+      - name: Publish Blazor WebAssembly
+        run: dotnet publish blazor-chart-webassembly.csproj -c Release -o publish
 
-      - name: Configurando Pages
+      - name: Prepare `docs/` for GitHub Pages
+        run: |
+          rm -rf docs
+          mkdir docs
+          cp -R publish/wwwroot/. docs/
+          # desliga o Jekyll (não é site Jekyll)
+          touch docs/.nojekyll
+
+      - name: Configure Pages to deploy from GitHub Actions
         uses: actions/configure-pages@v4
 
-      - name: Enviando arquivos
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
-        with: 
-          path: "docs/wwwroot"
+        with:
+          path: docs
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
