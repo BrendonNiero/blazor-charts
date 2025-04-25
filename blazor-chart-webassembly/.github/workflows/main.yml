@@ -3,7 +3,6 @@ name: Deploy
 on:
   push:
     branches: ["main"]
-
   workflow_dispatch:
 
 permissions:
@@ -21,34 +20,35 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configurando .NET
-        uses: actions/setup-dotnet@v3 
+      - name: Configurar .NET
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 8.0.x
 
-      - name: Instalando .NET Wasm Tools
+      - name: Instalar Wasm Tools
         run: dotnet workload install wasm-tools
 
-      - name: Restaurando as Dependências
+      - name: Restaurar Dependências
         run: dotnet restore
 
       - name: Build
         run: dotnet build -c Release --no-restore
 
-      - name: Criando o Publish
-        run: dotnet publish blazor-chart-webassembly.csproj -c:Release -o docs --nologo
+      - name: Publicar Blazor em docs
+        run: dotnet publish blazor-chart-webassembly.csproj -c Release -o docs --nologo
 
-      - name: Configurando Pages
+      - name: Configurar GitHub Pages
         uses: actions/configure-pages@v4
 
-      - name: Enviando arquivos
+      - name: Upload para GitHub Pages
         uses: actions/upload-pages-artifact@v3
-        with: 
-          path: "docs/wwwroot"
+        with:
+          path: docs
 
       - name: Deploy
         id: deployment
