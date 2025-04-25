@@ -25,7 +25,7 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
-      - name: Install WASM workload
+      - name: Instalando o Workload
         run: dotnet workload install wasm-tools
 
       - name: Restore dependencies
